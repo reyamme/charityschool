@@ -1,6 +1,10 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Navigation from "../components/navigation"
+import Navigation from "../components/navigation";
+import Hero from "../components/hero";
+import Volunteer from "../components/volunteer";
+import Values from "../components/ourValues";
+import Social from "../components/social";
 import 'prismjs/themes/prism-okaidia.css';
 
 export default ({ children }) => {
@@ -21,11 +25,36 @@ export default ({ children }) => {
         <div className="site-title">
           <Link to="/">{data.site.siteMetadata.title}</Link>
         </div>
-        <Navigation />
+        <div className="footer-navigation">
+          <Navigation />
+
+        </div>
+
+
       </header>
-      {children}
+      <section>
+        <Hero />
+      </section>
+      <section>
+        <Volunteer />
+      </section>
+      {/* {children} */}
+      <section>
+        <Values />
+      </section>
       <footer className="site-footer">
-        <p>&copy; {new Date().getFullYear()} Delog &bull; Crafted with <span role="img" aria-label="love">❤️</span> by <a href="https://w3layouts.com">W3Layouts</a></p>
+        <div className="footer-nav">
+          <Navigation />
+
+        </div>
+        <div className="copy-right">
+          <p>&copy; {new Date().getFullYear()} R.K &bull;  <span role="img" aria-label="love">❤️</span> by <a href="https://w3layouts.com">Reyam</a></p>
+
+        </div>
+        <Social />
+
+
+
       </footer>
     </div>
   )
