@@ -1,8 +1,6 @@
 import React from "react"
-import Helmet from 'react-helmet';
-import { graphql } from 'gatsby'
-import Layout from "../components/layout"
-// import PostLink from "../components/post-link"
+import Link from 'gatsby-link'
+
 
 const StudentFo = () => (
 
@@ -305,6 +303,7 @@ const StudentFo = () => (
                 <button>Send</button>
             </div>
         </form>
+        <Link to="/page-2/">Go to page 2</Link>
     </div>
 
 )
